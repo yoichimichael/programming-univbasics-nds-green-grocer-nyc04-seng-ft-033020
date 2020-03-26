@@ -31,9 +31,9 @@ def consolidate_cart(cart)
     else
       new_cart << item_w_count_key
     end
+    puts " #{index} #{item_w_count_key[:item]} #{item_w_count_key[:count]} #{!!item_exists} #{new_cart.inspect}"
     index += 1
   end
-  puts " #{index} #{item_w_count_key[:item]} #{item_w_count_key[:count]} #{!!item_exists} #{new_cart.inspect}"
   new_cart
 end
 
