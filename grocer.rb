@@ -14,18 +14,21 @@ def find_item_by_name_in_collection(name, collection)
   nil
 end
 
-def consolidate_cart(cart)
-  # Consult README for inputs and outputs
+# Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+
+def consolidate_cart(cart)
   new_cart = []
   index = 0  
   while index < cart.length do
     item_w_count_key = add_count_key(cart[index])
     position_in_new_cart = find_item_return_index(cart[index][:item], new_cart)
     item_exists = find_item_by_name_in_collection(item_w_count_key[:item], new_cart)
-     
+    puts item_exists
+    puts new_cart[position_in_new_cart]
+    puts
     if item_exists
       puts new_cart[position_in_new_cart][:count]
       new_cart[position_in_new_cart][:count] += 1
