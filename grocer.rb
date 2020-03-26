@@ -24,10 +24,9 @@ def consolidate_cart(cart)
   index = 0  
   while index < cart.length do
     item_w_count_key = add_count_key(cart[index])
-    position_in_new_cart = find_item_return_index(cart[index][:item], new_cart)
     item_exists = find_item_by_name_in_collection(item_w_count_key[:item], new_cart)
     if item_exists
-      
+      puts item_exists.object_id
       item_exists[:count] += 1
       
     else
