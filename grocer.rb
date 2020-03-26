@@ -27,11 +27,13 @@ def consolidate_cart(cart)
     item_exists = find_item_by_name_in_collection(item_w_count_key[:item], new_cart)
      
     if item_exists
+      puts new_cart[position_in_new_cart][:count]
       new_cart[position_in_new_cart][:count] += 1
+      puts new_cart[position_in_new_cart][:count]
     else
       new_cart << item_w_count_key
     end
-    puts " #{index} #{item_w_count_key[:item]} #{item_w_count_key[:count]} #{!!item_exists} #{new_cart.inspect}"
+    #puts " #{index} #{item_w_count_key[:item]} #{item_w_count_key[:count]} #{!!item_exists} #{new_cart.inspect}"
     index += 1
   end
   new_cart
