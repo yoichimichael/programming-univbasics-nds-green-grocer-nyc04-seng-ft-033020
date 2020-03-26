@@ -56,9 +56,6 @@ def find_item_return_index(name, collection)
 end
 
 def apply_coupons(cart, coupons)
-  pp cart
-  puts
-  pp coupons
   counter = 0 
   while counter < coupons.length do
     cart_item = find_item_by_name_in_collection(coupons[counter][:item], cart)
