@@ -1,3 +1,5 @@
+require 'pp'
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -54,6 +56,9 @@ def find_item_return_index(name, collection)
 end
 
 def apply_coupons(cart, coupons)
+  pp cart
+  puts
+  pp coupons
   counter = 0 
   while counter < coupons.length do
     cart_item = find_item_by_name_in_collection(coupons[counter][:item], cart)
@@ -78,6 +83,7 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
+
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
