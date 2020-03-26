@@ -1,3 +1,5 @@
+require 'pp'
+
 describe "Grocer" do
   # let() is like a global variable for tests
   let(:items) do
@@ -160,7 +162,7 @@ describe "Grocer" do
         ]
         consolidated_cart = consolidate_cart(cart)
         test_coupons = [coupons.first, coupons.last]
-
+        pp consolidated_cart
         coupon_applied_cart = apply_coupons(consolidated_cart, test_coupons)
 
         cheese = find_item_by_name_in_collection("CHEESE", coupon_applied_cart)
