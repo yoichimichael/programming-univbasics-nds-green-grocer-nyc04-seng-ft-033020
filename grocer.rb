@@ -30,6 +30,7 @@ def consolidate_cart(cart)
       puts new_cart[position_in_new_cart][:count]
       new_cart[position_in_new_cart][:count] += 1
       puts new_cart[position_in_new_cart][:count]
+      puts
     else
       new_cart << item_w_count_key
     end
